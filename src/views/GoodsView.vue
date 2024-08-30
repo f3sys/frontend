@@ -7,15 +7,15 @@ const data = [
         items: [
             {
                 title: '缶バッジ そらちゃん',
-                price: '100',
+                price: 100,
             },
             {
                 title: '缶バッジ まどいちゃん',
-                price: '100',
+                price: 100,
             },
             {
                 title: '缶バッジ すいちゃん',
-                price: '100',
+                price: 100,
             }
         ]
     },
@@ -24,19 +24,19 @@ const data = [
         items: [
             {
                 title: 'AICJ饅頭 桐葉菓 10個入り',
-                price: '1,500',
+                price: 1500,
             },
             {
                 title: 'AICJ饅頭 栗あん 10個入り',
-                price: '1,500',
+                price: 1500,
             },
             {
                 title: 'AICJ饅頭 桐葉菓 5個入り',
-                price: '750',
+                price: 750,
             },
             {
                 title: 'AICJ饅頭 栗あん 5個入り',
-                price: '750',
+                price: 750,
             },
         ]
     },
@@ -50,19 +50,15 @@ const data = [
             <span class="text-4xl md:text-5xl mb-6">
                 物品販売
             </span>
-            <span class="text-sm mb-10 font-light text-muted-color">
-                物品販売のメニューです <br />
-                高校食販メニューは<a class="underline" href="/foods">こちら</a>からご覧いただけます
-            </span>
-            <!-- <div>
-                class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start mb-4 bg-primary block py-2 px-6 max-w-fit">
-                11B
-                内藤ベジタブル</div>
-            <div class="flex flex-col gap-4">
-                <FoodText title="内藤ケバブ" price="450" />
-                <FoodText title="内藤ケバーブ" price="500" />
-            </div> -->
-            <div v-for="item in data" :key="item.name" class="mb-10">
+            <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
+                <span>
+                    物品販売のメニューです
+                </span>
+                <span>
+                    高校食販メニューは<a class="underline" href="/foods">こちら</a>からご覧いただけます
+                </span>
+            </div>
+            <div v-for="(item, index) in data" :key="item.name" :class="{ 'mb-10': index !== data.length - 1 }">
                 <div
                     class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start text-white dark:text-black mb-6 bg-primary block py-2 px-6 max-w-fit">
                     {{ item.name }}</div>

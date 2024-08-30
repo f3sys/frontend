@@ -3,15 +3,30 @@ import FoodText from '@/components/FoodText.vue';
 
 const data = [
     {
+        class: '11A',
         name: '内藤ベジタブル',
         items: [
             {
                 title: '内藤ケバブ',
-                price: '450',
+                price: 450,
             },
             {
                 title: '内藤ケバーブ',
-                price: '500',
+                price: 500,
+            }
+        ]
+    },
+    {
+        class: '11B',
+        name: '内藤ベジタブル',
+        items: [
+            {
+                title: '内藤ケバブ',
+                price: 450,
+            },
+            {
+                title: '内藤ケバーブ',
+                price: 500,
             }
         ]
     },
@@ -21,11 +36,11 @@ const data = [
         items: [
             {
                 title: '内藤ケバブ',
-                price: '450',
+                price: 450,
             },
             {
                 title: '内藤ケバーブ',
-                price: '500',
+                price: 500,
             }
         ]
     },
@@ -35,86 +50,15 @@ const data = [
         items: [
             {
                 title: '内藤ケバブ',
-                price: '450',
+                price: 450,
             },
             {
                 title: '内藤ケバーブ',
-                price: '500',
+                price: 500,
             }
         ]
-    },
-    {
-        class: '11E',
-        name: '内藤ベジタブル',
-        items: [
-            {
-                title: '内藤ケバブ',
-                price: '450',
-            },
-            {
-                title: '内藤ケバーブ',
-                price: '500',
-            }
-        ]
-    },
-    {
-        class: '11F',
-        name: '内藤ベジタブル',
-        items: [
-            {
-                title: '内藤ケバブ',
-                price: '450',
-            },
-            {
-                title: '内藤ケバーブ',
-                price: '500',
-            }
-        ]
-    },
-    {
-        class: '11G',
-        name: '内藤ベジタブル',
-        items: [
-            {
-                title: '内藤ケバブ',
-                price: '450',
-            },
-            {
-                title: '内藤ケバーブ',
-                price: '500',
-            }
-        ]
-    },
-    {
-        class: '11H',
-        name: '内藤ベジタブル',
-        items: [
-            {
-                title: '内藤ケバブ',
-                price: '450',
-            },
-            {
-                title: '内藤ケバーブ',
-                price: '500',
-            }
-        ]
-    },
-    {
-        class: '11I',
-        name: '内藤ベジタブル',
-        items: [
-            {
-                title: '内藤ケバブ',
-                price: '450',
-            },
-            {
-                title: '内藤ケバーブ',
-                price: '500',
-            }
-        ]
-    },
+    }
 ];
-
 </script>
 
 <template>
@@ -123,10 +67,14 @@ const data = [
             <span class="text-4xl md:text-5xl mb-6">
                 高校食飯
             </span>
-            <span class="text-sm mb-10 font-light text-muted-color">
-                高校食班のメニューです <br />
-                その他物品販売は<a class="underline" href="/goods">こちら</a>からご覧いただけます
-            </span>
+            <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
+                <span>
+                    高校食班のメニューです
+                </span>
+                <span>
+                    その他物品販売は<a class="underline" href="/goods">こちら</a>からご覧いただけます
+                </span>
+            </div>
             <!-- <div>
                 class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start mb-4 bg-primary block py-2 px-6 max-w-fit">
                 11B
@@ -135,7 +83,7 @@ const data = [
                 <FoodText title="内藤ケバブ" price="450" />
                 <FoodText title="内藤ケバーブ" price="500" />
             </div> -->
-            <div v-for="item in data" :key="item.class" class="mb-10">
+            <div v-for="(item, index) in data" :key="item.class" :class="{ 'mb-10': index !== data.length - 1 }">
                 <div
                     class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start text-white dark:text-black mb-6 bg-primary block py-2 px-6 max-w-fit">
                     {{ item.class }}
