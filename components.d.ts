@@ -7,9 +7,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Accordion: typeof import('primevue/accordion')['default']
+    AccordionContent: typeof import('primevue/accordioncontent')['default']
+    AccordionHeader: typeof import('primevue/accordionheader')['default']
+    AccordionPanel: typeof import('primevue/accordionpanel')['default']
     Button: typeof import('primevue/button')['default']
     Card: typeof import('primevue/card')['default']
     CardText: typeof import('./src/components/CardText.vue')['default']
+    DataView: typeof import('primevue/dataview')['default']
     Dialog: typeof import('primevue/dialog')['default']
     Divider: typeof import('primevue/divider')['default']
     F3SiD: typeof import('./src/components/F3SiD.vue')['default']
@@ -28,6 +33,7 @@ declare module 'vue' {
     MegaMenu: typeof import('primevue/megamenu')['default']
     Menubar: typeof import('primevue/menubar')['default']
     Panel: typeof import('primevue/panel')['default']
+    PriceText: typeof import('./src/components/PriceText.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Splitter: typeof import('primevue/splitter')['default']
@@ -37,6 +43,7 @@ declare module 'vue' {
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
   export interface ComponentCustomProperties {
+    AnimateOnScroll: typeof import('primevue/animateonscroll')['default']
     Ripple: typeof import('primevue/ripple')['default']
   }
 }

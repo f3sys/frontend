@@ -41,5 +41,4 @@ app.use(PrimeVue, {
     }
 })
 
-
 app.mount('#app')

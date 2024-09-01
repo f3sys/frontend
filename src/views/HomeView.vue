@@ -7,17 +7,21 @@
       </h1>
       <Button class="!absolute left-10 bottom-10" label="開催事項" as="a" href="#jikou"></Button>
 
-      <div class="flex flex-col w-full max-w-44 items-center gap-2 absolute bottom-4 left-0 right-0 mx-auto">
-        <!-- <span class="text-xl font-medium text-white" style="text-shadow: 0px 0px 10px black;">Scroll Down</span> -->
+      <!-- <div class="flex flex-col w-full max-w-44 items-center gap-2 absolute bottom-4 left-0 right-0 mx-auto">
         <span
           class="animate-bounce h-8 w-8 bg-primary text-white dark:text-black rounded-full inline-flex items-center justify-center ">
           <i class="pi pi-arrow-down text-xl"></i>
+        </span>
+      </div> -->
+      <div class="!absolute right-0 bottom-0">
+        <span class="h-16 w-16 bg-primary text-white dark:text-black inline-flex items-center justify-center ">
+          <i class="pi pi-arrow-down !text-2xl"></i>
         </span>
       </div>
     </div>
 
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-10 w-full max-w-screen-xl mx-auto px-4">
-      <Card class="self-start justify-self-center p-4">
+      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-800">
         <template #title>Concept</template>
         <template #content>
           <p class="m-0">
@@ -30,7 +34,7 @@
         </template>
       </Card>
 
-      <Card class="self-start justify-self-center p-4">
+      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-800">
         <template #title>F3SiDとは</template>
         <template #content>
           <p class="m-0">

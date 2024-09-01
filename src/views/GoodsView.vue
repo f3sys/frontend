@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import FoodText from '@/components/FoodText.vue';
+import FoodText from '@/components/PriceText.vue';
 
-const data = [
+const data: Array<{ name: string, items: Array<{ title: string, price: number }> }> = [
     {
         name: '生徒会販売',
         items: [
@@ -55,7 +55,7 @@ const data = [
                     物品販売のメニューです
                 </span>
                 <span>
-                    高校食販メニューは<a class="underline" href="/foods">こちら</a>からご覧いただけます
+                    高校食販メニューは<RouterLink class="underline" to="/foods">こちら</RouterLink>からご覧いただけます
                 </span>
             </div>
             <div v-for="(item, index) in data" :key="item.name" :class="{ 'mb-10': index !== data.length - 1 }">
@@ -65,7 +65,6 @@ const data = [
                 <div class="flex flex-col gap-4">
                     <FoodText v-for="food in item.items" :key="food.title" :title="food.title" :price="food.price" />
                 </div>
-
             </div>
         </div>
     </div>

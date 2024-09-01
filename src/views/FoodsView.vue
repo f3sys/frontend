@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import FoodText from '@/components/FoodText.vue';
+import FoodText from '@/components/PriceText.vue';
 
-const data = [
+const data: Array<{ class: string, name: string, items: Array<{ title: string, price: number }> }> = [
     {
         class: '11A',
         name: '内藤ベジタブル',
@@ -72,7 +72,7 @@ const data = [
                     高校食班のメニューです
                 </span>
                 <span>
-                    その他物品販売は<a class="underline" href="/goods">こちら</a>からご覧いただけます
+                    その他物品販売は<RouterLink class="underline" to="/goods">こちら</RouterLink>からご覧いただけます
                 </span>
             </div>
             <!-- <div>

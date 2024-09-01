@@ -13,6 +13,16 @@ const items: MenuItem[] = [
         class: 'ml-2'
     },
     {
+        label: '参加グループ',
+        to: '/groups',
+        class: 'ml-2'
+    },
+    {
+        label: 'スケジュール',
+        to: '/schedule',
+        class: 'ml-2'
+    },
+    {
         label: 'パンフレット',
         to: '/pamphlet',
         class: 'ml-2'
@@ -21,7 +31,7 @@ const items: MenuItem[] = [
 </script>
 
 <template>
-    <MegaMenu :model="items" breakpoint="768px"
+    <MegaMenu :model="items" breakpoint="1024px"
         style="border: none; border-bottom: 1px solid var(--p-megamenu-border-color); border-radius: 0;">
         <template #start>
             <h1 class="text-2xl md:text-3xl font-semibold">
@@ -30,7 +40,9 @@ const items: MenuItem[] = [
         </template>
         <template #item="{ item }">
             <RouterLink :to="item.to">
-                <Button text plain size="large">{{ item.label }}</Button>
+                <Button class="w-full lg:w-auto !justify-start inline-block" text plain size="large">
+                    {{ item.label }}
+                </Button>
             </RouterLink>
         </template>
         <template #end>
@@ -38,3 +50,9 @@ const items: MenuItem[] = [
         </template>
     </MegaMenu>
 </template>
+
+<style lang="css">
+.p-megamenu-item {
+    margin: 0;
+}
+</style>
