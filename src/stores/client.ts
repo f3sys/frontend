@@ -12,7 +12,5 @@ export const useClientStore = defineStore('client', () => {
 
     return { F3SiD, setF3SiD, }
 }, {
-    persist: {
-        storage: sessionStorage,
-    },
+    persist: true
 })
