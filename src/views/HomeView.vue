@@ -21,7 +21,7 @@
     </div>
 
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-10 w-full max-w-screen-xl mx-auto px-4">
-      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-800">
+      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-700">
         <template #title>Concept</template>
         <template #content>
           <p class="m-0">
@@ -34,7 +34,7 @@
         </template>
       </Card>
 
-      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-800">
+      <Card class="self-start justify-self-center p-4 border border-surface-200 dark:border-surface-700">
         <template #title>F3SiDとは</template>
         <template #content>
           <p class="m-0">

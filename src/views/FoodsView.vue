@@ -75,14 +75,6 @@ const data: Array<{ class: string, name: string, items: Array<{ title: string, p
                     その他物品販売は<RouterLink class="underline" to="/goods">こちら</RouterLink>からご覧いただけます
                 </span>
             </div>
-            <!-- <div>
-                class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start mb-4 bg-primary block py-2 px-6 max-w-fit">
-                11B
-                内藤ベジタブル</div>
-            <div class="flex flex-col gap-4">
-                <FoodText title="内藤ケバブ" price="450" />
-                <FoodText title="内藤ケバーブ" price="500" />
-            </div> -->
             <div v-for="(item, index) in data" :key="item.class" :class="{ 'mb-10': index !== data.length - 1 }">
                 <div
                     class="text-2xl sm:text-3xl md:text-4xl font-semibold self-start text-white dark:text-black mb-6 bg-primary block py-2 px-6 max-w-fit">
