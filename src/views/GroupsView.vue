@@ -78,7 +78,7 @@ const groups = ref<Array<{ name: string, belong: string, description: string }>>
                             {{ group.belong }}</span>
                     </AccordionHeader>
                     <AccordionContent>
-                        <p class="m-0">{{ group.description }}</p>
+                        <p class="m-0 font-light text-muted-color-emphasis">{{ group.description }}</p>
                     </AccordionContent>
                 </AccordionPanel>
             </Accordion>
