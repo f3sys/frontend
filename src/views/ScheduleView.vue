@@ -58,7 +58,7 @@ const schedules = ref([{
                                 </span>
                             </template>
                             <template #content="slotProps">
-                                <Chip v-if="slotProps.item.name" :label="slotProps.item.name">
+                                <Chip v-if="slotProps.item.name" class="!rounded-lg" :label="slotProps.item.name">
                                 </Chip>
                             </template>
                         </Timeline>
