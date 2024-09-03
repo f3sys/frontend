@@ -34,13 +34,13 @@ const items: MenuItem[] = [
     <MegaMenu :model="items" breakpoint="1024px"
         style="border: none; border-bottom: 1px solid var(--p-megamenu-border-color); border-radius: 0;">
         <template #start>
-            <h1 class="text-2xl md:text-3xl font-semibold">
+            <h1 class="text-2xl font-medium">
                 <RouterLink to="/">AICJ 学園祭</RouterLink>
             </h1>
         </template>
         <template #item="{ item }">
             <RouterLink :to="item.to">
-                <Button class="w-full lg:w-auto !justify-start inline-block" text plain size="large">
+                <Button class="w-full lg:w-auto !justify-start inline-block" text plain>
                     {{ item.label }}
                 </Button>
             </RouterLink>

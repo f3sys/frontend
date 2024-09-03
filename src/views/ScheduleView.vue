@@ -1,21 +1,31 @@
 <script setup lang="ts">
 import { ref } from "vue";
 
-const day1 = ref([
-    { name: 'Grade 7', date: '9:30' },
-    { name: 'Chamber Ensemble', date: '10:00' },
-    { name: 'りまれも。', date: '10:40' },
-    { name: 'ダンス部', date: '11:00' },
+const schedules = ref([{
+    day: '1',
+    type: '非公開日',
+    schedule: [
+        { name: 'Grade 7', date: '9:30' },
+        { name: 'Chamber Ensemble', date: '10:00' },
+        { name: 'りまれも。', date: '10:40' },
+        { name: 'ダンス部', date: '11:00' },
+        { name: 'GANJO-Kenjo-sanjo', date: '12:20' },
+    ],
+    value: '0'
+}, {
+    day: '2',
+    type: '公開日',
+    schedule: [
+        { name: 'ダンス部', date: '10:00' },
+        { name: 'GANJO-Kenjo-sanjo', date: '10:20' },
+        { name: 'Chamber Ensemble', date: '10:30' },
+        { name: 'Grade 7', date: '11:30' },
+        { name: 'Chamber Ensemble', date: '12:00' },
+    ],
+    value: '1'
+}
 ])
 
-const day2 = ref([
-    { name: 'ダンス部', date: '10:00' },
-    { name: 'GANJO-Kenjo-sanjo', date: '10:20' },
-    { name: 'Chamber Ensemble', date: '10:30' },
-])
-
-const selectButtonValue = ref('Day 1');
-const selectButtonOptions = ref(['Day 1', 'Day 2']);
 </script>
 
 <template>
@@ -33,44 +43,28 @@ const selectButtonOptions = ref(['Day 1', 'Day 2']);
                 </span>
             </div>
 
-            <SelectButton :allowEmpty="false" v-model="selectButtonValue" :options="selectButtonOptions"
-                aria-labelledby="basic" class="!flex justify-center" />
-            <Card v-if="selectButtonValue === 'Day 1'" class="!shadow-none">
-                <template #title>
-                    <span class="text-lg font-semibold text-primary !flex justify-center mb-2">非公開日</span>
-                </template>
-                <template #content>
-                    <Timeline :value="day1">
-                        <template #opposite="slotProps">
-                            <span class="text-surface-500 text-sm dark:text-surface-400">
-                                {{ slotProps.item.date }}
-                            </span>
-                        </template>
-                        <template #content="slotProps">
-                            <Chip v-if="slotProps.item.name" :label="slotProps.item.name">
-                            </Chip>
-                        </template>
-                    </Timeline>
-                </template>
-            </Card>
-            <Card v-if="selectButtonValue === 'Day 2'" class="!shadow-none">
-                <template #title>
-                    <span class="text-lg font-semibold text-primary !flex justify-center mb-2">公開日</span>
-                </template>
-                <template #content>
-                    <Timeline :value="day2">
-                        <template #opposite="slotProps">
-                            <span class="text-surface-500 text-sm dark:text-surface-400">
-                                {{ slotProps.item.date }}
-                            </span>
-                        </template>
-                        <template #content="slotProps">
-                            <Chip v-if="slotProps.item.name" :label="slotProps.item.name">
-                            </Chip>
-                        </template>
-                    </Timeline>
-                </template>
-            </Card>
+            <Tabs value="0">
+                <TabList class="mb-4">
+                    <Tab v-for="schedule in schedules" :key="schedule.day" :value="schedule.value">
+                        {{ `Day ${schedule.day} (${schedule.type})` }}
+                    </Tab>
+                </TabList>
+                <TabPanels>
+                    <TabPanel v-for="schedule in schedules" :key="schedule.day" :value="schedule.value">
+                        <Timeline :value="schedule.schedule">
+                            <template #opposite="slotProps">
+                                <span class="text-surface-500 text-sm dark:text-surface-400">
+                                    {{ slotProps.item.date }}
+                                </span>
+                            </template>
+                            <template #content="slotProps">
+                                <Chip v-if="slotProps.item.name" :label="slotProps.item.name">
+                                </Chip>
+                            </template>
+                        </Timeline>
+                    </TabPanel>
+                </TabPanels>
+            </Tabs>
         </div>
     </div>
 </template>

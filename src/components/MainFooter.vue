@@ -13,6 +13,9 @@
                 <li>
                     <a href="https://www.tiktok.com/@wellcomeaicj" class="hover:underline me-4 md:me-6">Tiktok</a>
                 </li>
+                <li>
+                    <a href="https://github.com/f3sys" class="hover:underline me-4 md:me-6">GitHub</a>
+                </li>
             </ul>
         </div>
         <Divider />
