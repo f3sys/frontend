@@ -50,9 +50,9 @@
           <Divider layout="vertical" />
 
           <div class="grid grid-cols-1 max-w-60 w-full">
-            <CardText title="DAY 1 非公開日" :subtitles="['2024/10/21']" :subsubtitles="['(金・平)']" />
+            <CardText title="DAY 1 非公開日" :subtitles="['2024/10/18']" :subsubtitles="['(金・平)']" />
 
-            <CardText title="DAY 2 公開日" :subtitles="['2024/10/22']" :subsubtitles="['(土・休)']" />
+            <CardText title="DAY 2 公開日" :subtitles="['2024/10/19']" :subsubtitles="['(土・休)']" />
 
             <CardText title="TIME" :subtitles="['9:30 - 15:30']" no-margin-bottom />
           </div>
