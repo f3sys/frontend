@@ -6,7 +6,9 @@ export const useClientStore = defineStore('client', () => {
 
     async function setF3SiD() {
         const url = import.meta.env.VITE_API_URL;
-        const data = await fetch(url + "visitor").then((r) => r.json());
+        const data = await fetch(url + "visitor", {
+            method: "POST"
+        }).then((r) => r.json());
         F3SiD.value = data.f3sid
     }
 
