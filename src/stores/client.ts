@@ -10,16 +10,8 @@ export const useClientStore = defineStore('client', () => {
             const data = await fetch(url + "visitor", {
                 method: "GET"
             });
-            if (data.status == 404) {
-                const data = await fetch(url + "visitor", {
-                    method: "POST"
-                });
-                F3SiD.value = (await data.json()).f3sid;
-                return true
-            } else {
-                F3SiD.value = (await data.json()).f3sid;
-                return true
-            }
+            F3SiD.value = (await data.json()).f3sid;
+            return true
         } catch (e) {
             return false
         }
