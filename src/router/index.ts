@@ -36,7 +36,12 @@ const router = createRouter({
       path: '/pamphlet',
       name: 'pamphlet',
       component: () => import('../views/PamphletView.vue')
-    }
+    },
+    // {
+    //   path: '/vote',
+    //   name: 'vote',
+    //   component: () => import('../views/VoteView.vue')
+    // }
   ]
 })
 

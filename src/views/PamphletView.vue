@@ -6,11 +6,11 @@
             </span>
             <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
                 <span>
-                    データ版パンフレットをダウンロードいただけます
+                    データ版パンフレットをダウンロードいただけます。
                 </span>
                 <span>
                     <i class="pi pi-asterisk !text-sm" />
-                    個人利用・商用を問わず、再配布及びAICJ学園祭以外の目的での利用はご遠慮ください
+                    個人利用・商用を問わず、再配布及びAICJ学園祭以外の目的での利用はご遠慮ください。
                 </span>
             </div>
             <Image class="mb-10" src="https://placehold.co/210x297"

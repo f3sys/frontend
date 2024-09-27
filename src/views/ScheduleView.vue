@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
 
-const schedules = ref([{
+const schedules: Array<{ day: string, type: string, schedule: Array<{ name: string, date: string }>, value: string }> = [{
     day: '1',
     type: '非公開日',
     schedule: [
@@ -23,8 +22,7 @@ const schedules = ref([{
         { name: 'Chamber Ensemble', date: '12:00' },
     ],
     value: '1'
-}
-])
+}]
 
 </script>
 
@@ -36,10 +34,10 @@ const schedules = ref([{
             </span>
             <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
                 <span>
-                    ステージ企画のスケジュールをご確認いただけます
+                    ステージ企画のスケジュールをご確認いただけます。
                 </span>
                 <span>
-                    クラブ展示などのスケジュールは<RouterLink class="underline" to="/pamphlet">こちら</RouterLink>からご覧いただけます
+                    クラブ展示などのスケジュールは<RouterLink class="underline" to="/pamphlet">こちら</RouterLink>からご覧いただけます。
                 </span>
             </div>
 

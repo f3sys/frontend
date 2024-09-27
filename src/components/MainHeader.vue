@@ -26,7 +26,12 @@ const items: MenuItem[] = [
         label: 'パンフレット',
         to: '/pamphlet',
         class: 'ml-2'
-    }
+    },
+    // {
+    //     label: '投票',
+    //     to: '/vote',
+    //     class: 'ml-2'
+    // }
 ];
 </script>
 

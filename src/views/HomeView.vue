@@ -16,7 +16,7 @@
 
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-10 w-full max-w-screen-xl mx-auto px-4">
       <Card class="self-start justify-self-center h-full p-4 border border-surface-200 dark:border-surface-700">
-        <template #title><span class="text-primary">コンセプト</span></template>
+        <template #title><span class="text-primary">スローガン</span></template>
         <template #content>
           <p class="m-0">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae
@@ -56,7 +56,7 @@
           <Divider layout="vertical" />
 
           <div class="grid grid-cols-1 max-w-60 w-full">
-            <CardText title="THEME" :subtitles="['???']" />
+            <CardText title="SLOGAN" :subtitles="['#恥ずかしいか青春は']" />
 
             <CardText title="SNS" :subtitles="['Twitter', 'Tiktok']" :subsubsubtitles="['最新情報をチェック!']" />
           </div>

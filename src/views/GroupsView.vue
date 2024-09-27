@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
 
-const groups = ref<Array<{ name: string, belong: string, description: string }>>([
+const groups: Array<{ name: string, belong: string, description: string }> = [
     {
         name: 'グループ1',
         belong: '7A',
@@ -52,7 +51,7 @@ const groups = ref<Array<{ name: string, belong: string, description: string }>>
         belong: '7J',
         description: 'グループ10の紹介文です'
     }
-])
+]
 </script>
 
 <template>
@@ -63,10 +62,10 @@ const groups = ref<Array<{ name: string, belong: string, description: string }>>
             </span>
             <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
                 <span>
-                    中学生クラス展示・高校食販・ステージ企画・生徒企画の紹介文一覧です
+                    中学生クラス展示・高校食販・ステージ企画・生徒企画の紹介文一覧です。
                 </span>
                 <span>
-                    高校食販メニューは<RouterLink class="underline" to="/foods">こちら</RouterLink>からご覧いただけます
+                    高校食販メニューは<RouterLink class="underline" to="/foods">こちら</RouterLink>からご覧いただけます。
                 </span>
             </div>
             <Accordion :value="['0']" multiple>

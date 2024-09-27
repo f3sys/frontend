@@ -37,7 +37,10 @@ app.use(PrimeVue, {
                     950: '{rose.950}'
                 }
             }
-        })
+        }),
+        options: {
+            darkModeSelector: '.my-app-dark',
+        }
     }
 })
 

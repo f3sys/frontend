@@ -69,10 +69,10 @@ const data: Array<{ class: string, name: string, items: Array<{ title: string, p
             </span>
             <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
                 <span>
-                    高校食班のメニューです
+                    高校食班のメニューです。
                 </span>
                 <span>
-                    その他物品販売は<RouterLink class="underline" to="/goods">こちら</RouterLink>からご覧いただけます
+                    その他物品販売は<RouterLink class="underline" to="/goods">こちら</RouterLink>からご覧いただけます。
                 </span>
             </div>
             <div v-for="(item, index) in data" :key="item.class" :class="{ 'mb-10': index !== data.length - 1 }">

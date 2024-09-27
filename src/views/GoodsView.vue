@@ -52,10 +52,10 @@ const data: Array<{ name: string, items: Array<{ title: string, price: number }>
             </span>
             <div class="flex flex-col gap-3 mb-10 text-sm font-light text-muted-color">
                 <span>
-                    物品販売のメニューです
+                    物品販売のメニューです。
                 </span>
                 <span>
-                    高校食販メニューは<RouterLink class="underline" to="/foods">こちら</RouterLink>からご覧いただけます
+                    高校食販メニューは<RouterLink class="underline" to="/foods">こちら</RouterLink>からご覧いただけます。
                 </span>
             </div>
             <div v-for="(item, index) in data" :key="item.name" :class="{ 'mb-10': index !== data.length - 1 }">
