@@ -38,9 +38,9 @@ app.use(PrimeVue, {
                 }
             }
         }),
-        options: {
-            darkModeSelector: '.my-app-dark',
-        }
+        // options: {
+        //     darkModeSelector: '.my-app-dark',
+        // }
     }
 })
 
