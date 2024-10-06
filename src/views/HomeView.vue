@@ -22,7 +22,7 @@
         </div>
 
         <div
-            class="flex gap-10 flex-col md:flex-row mt-10 w-full max-w-screen-xl mx-auto px-4"
+            class="flex space-x-10 flex-col md:flex-row mt-10 w-full max-w-screen-xl mx-auto px-4"
         >
             <Card
                 class="basis-2/3 p-4 border border-surface-200 dark:border-surface-700"
@@ -51,9 +51,7 @@
                     </p>
                 </template>
             </Card>
-            <div id="jikou" />
         </div>
-
         <div
             class="w-full max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-4 my-10"
         >
