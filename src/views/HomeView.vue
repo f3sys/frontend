@@ -1,7 +1,7 @@
 <template>
     <main>
         <div
-            class="bg-[url(../assets/F8ywqpKa8AE6NoI.jpg)] bg-cover bg-no-repeat bg-center h-screen max-h-[calc(100vh-75px)] relative"
+            class="bg-[url(../assets/F8ywqpKa8AE6NoI.jpg)] bg-cover bg-no-repeat bg-center h-full min-h-[calc(100svh-75px)] relative"
         >
             <h1
                 class="text-5xl font-semibold text-white absolute left-10 bottom-10"
@@ -22,30 +22,28 @@
         </div>
 
         <div
-            class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-10 w-full max-w-screen-xl mx-auto px-4"
+            class="flex gap-10 flex-col md:flex-row mt-10 w-full max-w-screen-xl mx-auto px-4"
         >
             <Card
-                class="self-start justify-self-center h-full p-4 border border-surface-200 dark:border-surface-700"
+                class="basis-2/3 p-4 border border-surface-200 dark:border-surface-700"
             >
                 <template #title>
-                    <span class="text-primary">スローガン</span>
+                    <span class="text-primary text-2xl">スローガン</span>
                 </template>
                 <template #content>
                     <p class="m-0">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Inventore sed consequuntur error repudiandae
-                        numquam deserunt quisquam repellat libero asperiores
-                        earum nam nobis, culpa ratione quam perferendis esse,
-                        cupiditate neque quas!
+                        世の中に存在する漫画・アニメ作品の実に80%ほどが中高校生を題材にしている。しかし、僕たちが学園で過ごす6年間は本来人生全体の8%にも満たない。多くの人が人生のハイライトとして渇望する青春の6年間で、何が出来るのだろうか。今年のスローガンである「恥ずかしいか青春は」はそんな思いの答え探しと言ってもいいだろう。恥ずかしいからこそ青春でもあるのだが、限られたこの学園生活において、自分を隠して生きていくにはあまりにも勿体無い。まだ自分を見つけていない人は、学園祭を通して自分自身と向き合うこともできるだろう。共に青春を求めよう。
                     </p>
                 </template>
             </Card>
 
             <Card
-                class="self-start justify-self-center h-full p-4 border border-surface-200 dark:border-surface-700"
+                class="basis-1/3 p-4 border border-surface-200 dark:border-surface-700"
             >
                 <template #title>
-                    <span class="text-primary">F3SiD</span>とは
+                    <span class="text-2xl">
+                        <span class="text-primary">F3SiD</span>とは
+                    </span>
                 </template>
                 <template #content>
                     <p class="m-0">
@@ -57,7 +55,7 @@
         </div>
 
         <div
-            class="w-full max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-4 my-8"
+            class="w-full max-w-screen-xl mx-auto px-4 grid lg:grid-cols-2 gap-4 my-10"
         >
             <div
                 class="self-start justify-self-center max-w-lg w-full grid gap-3"

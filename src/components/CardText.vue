@@ -35,7 +35,7 @@ defineProps<{
                         {{ subtitle }}
                     </a>
                 </span>
-                <span class="mr-2 mb-1 sm:mb-0 text-nowrap" v-else>
+                <span class="mr-2 mb-1 sm:mb-0" v-else>
                     {{ subtitle }}
                 </span>
                 <template v-if="subsubtitles">
