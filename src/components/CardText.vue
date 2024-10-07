@@ -45,12 +45,14 @@ defineProps<{
                 </template>
             </div>
         </div>
-        <p
-            v-for="subsubsubtitle in subsubsubtitles"
-            :key="subsubsubtitle"
-            class="text-sm font-light text-muted-color"
-        >
-            {{ subsubsubtitle }}
-        </p>
+        <div class="flex flex-col gap-1">
+            <p
+                v-for="subsubsubtitle in subsubsubtitles"
+                :key="subsubsubtitle"
+                class="text-sm font-light text-muted-color"
+            >
+                {{ subsubsubtitle }}
+            </p>
+        </div>
     </div>
 </template>
