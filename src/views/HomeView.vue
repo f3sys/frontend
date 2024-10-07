@@ -54,7 +54,7 @@ function goto(main: HTMLDivElement | null) {
                 <template #content>
                     <div class="flex flex-col gap-2">
                         <p class="leading-relaxed m-0">
-                            今年導入されたF3S（フェス）は、各個人に割り当てられるQRコード（F3SiD）を使用して、学園祭の入退場や購入記録を自動的に管理するシステムです。
+                            今年導入されたF3S（フェス）は、個々人に割り当てられるQRコード（F3SiD）をつかって、学園祭の入退場や購入記録を自動管理するシステムです。
                         </p>
                         <p class="leading-relaxed m-0">
                             F3Sで収集したデータを活用することで、在庫差異や余剰在庫の防止、来場者の予測、そしてランク付けが可能になりました。
@@ -69,7 +69,7 @@ function goto(main: HTMLDivElement | null) {
                 <div class="flex">
                     <Divider layout="vertical" />
 
-                    <div class="grid grid-cols-1 max-w-60 w-full">
+                    <div class="flex flex-col max-w-60 w-full">
                         <CardText title="DAY 1 非公開日" :subtitles="['2024/10/18']" :subsubtitles="['(金・平)']" />
 
                         <CardText title="DAY 2 公開日" :subtitles="['2024/10/19']" :subsubtitles="['(土・休)']" />
@@ -79,7 +79,7 @@ function goto(main: HTMLDivElement | null) {
 
                     <Divider layout="vertical" />
 
-                    <div class="grid grid-cols-1 max-w-60 w-full">
+                    <div class="flex flex-col max-w-60 w-full">
                         <CardText title="SLOGAN" :subtitles="['#恥ずかしいか青春は']" />
 
                         <CardText title="SNS" :subtitles="['Twitter', 'Tiktok']" :subsubsubtitles="['最新情報をチェック!']" />
@@ -91,7 +91,7 @@ function goto(main: HTMLDivElement | null) {
                 <div class="flex">
                     <Divider layout="vertical" />
 
-                    <div class="grid grid-cols-1 max-w-60 w-full">
+                    <div class="flex flex-col max-w-60 w-full">
                         <CardText title="PLACE" :subtitles="['AICJ中学・高等学校']" :subsubsubtitles="[
                             '〒731-0138',
                             '広島市安佐南区祇園3丁目1-15',
@@ -105,7 +105,7 @@ function goto(main: HTMLDivElement | null) {
 
                     <Divider layout="vertical" />
 
-                    <div class="grid grid-cols-1 max-w-60 w-full">
+                    <div class="flex flex-col max-w-60 w-full">
                         <CardText title="ACCESS" :subtitles="[
                             'JR下祇園駅',
                             'HRT西原駅',
