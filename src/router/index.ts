@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+const HomeView = () => import('../views/HomeView.vue')
+const FoodsView = () => import('../views/FoodsView.vue')
+const GoodsView = () => import('../views/GoodsView.vue')
+const GroupsView = () => import('../views/GroupsView.vue')
+const ScheduleView = () => import('../views/ScheduleView.vue')
+const PamphletView = () => import('../views/PamphletView.vue')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,37 +17,35 @@ const router = createRouter({
     {
       path: '/foods',
       name: 'foods',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/FoodsView.vue')
+      component: FoodsView
     },
     {
       path: '/goods',
       name: 'goods',
-      component: () => import('../views/GoodsView.vue')
+      component: GoodsView
     },
     {
       path: '/groups',
       name: 'groups',
-      component: () => import('../views/GroupsView.vue')
+      component: GroupsView
     },
     {
       path: '/schedule',
       name: 'schedule',
-      component: () => import('../views/ScheduleView.vue')
+      component: ScheduleView
     },
     {
       path: '/pamphlet',
       name: 'pamphlet',
-      component: () => import('../views/PamphletView.vue')
+      component: PamphletView
     },
-    // {
-    //   path: '/vote',
-    //   name: 'vote',
-    //   component: () => import('../views/VoteView.vue')
-    // }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    return {
+      top: 0,
+      behavior: "smooth"
+    }
+  }
 })
 
 export default router
