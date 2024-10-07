@@ -74,7 +74,7 @@ function goto(main: HTMLDivElement | null) {
 
                         <CardText title="DAY 2 公開日" :subtitles="['2024/10/19']" :subsubtitles="['(土・休)']" />
 
-                        <CardText title="TIME" :subtitles="['9:30 - 15:30']" no-margin-bottom />
+                        <CardText title="TIME" :subtitles="['9:30 - 15:30']" />
                     </div>
 
                     <Divider layout="vertical" />

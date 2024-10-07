@@ -1,19 +1,14 @@
 <script setup lang="ts">
-const props = withDefaults(defineProps<{
+const props = defineProps<{
     title: string;
     subtitles: string[];
     subsubtitles?: string[];
     subsubsubtitles?: string[];
-    noMarginBottom?: boolean;
-}>(), {
-    subsubtitles: () => [] as string[],
-    subsubsubtitles: () => [] as string[],
-    noMarginBottom: false
-});
+}>();
 </script>
 
 <template>
-    <div :class="{ 'mb-4': !props.noMarginBottom }">
+    <div class="mb-4">
         <p class="text-sm mb-2 text-primary">
             {{ props.title }}
         </p>
@@ -30,12 +25,13 @@ const props = withDefaults(defineProps<{
                             {{ subtitle }}
                         </span>
                     </span>
-                    <span v-if="props.subsubtitles.length" class="sm:ml-2 font-light text-muted-color text-nowrap">
+                    <span v-if="props.subsubtitles && props.subsubtitles.length"
+                        class="sm:ml-2 font-light text-muted-color text-nowrap">
                         {{ props.subsubtitles[index] || '' }}
                     </span>
                 </div>
             </div>
-            <div v-if="props.subsubsubtitles.length" class="flex flex-col gap-1">
+            <div v-if="props.subsubsubtitles && props.subsubsubtitles.length" class="flex flex-col gap-1">
                 <p v-for="subsubsubtitle in props.subsubsubtitles" :key="subsubsubtitle"
                     class="text-sm font-light text-muted-color">
                     {{ subsubsubtitle }}
