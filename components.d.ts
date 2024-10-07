@@ -25,6 +25,7 @@ declare module 'vue' {
     PriceText: typeof import('./src/components/PriceText.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ScrollTop: typeof import('primevue/scrolltop')['default']
     Tab: typeof import('primevue/tab')['default']
     TabList: typeof import('primevue/tablist')['default']
     TabPanel: typeof import('primevue/tabpanel')['default']

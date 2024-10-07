@@ -16,4 +16,5 @@ import 'primeicons/primeicons.css';
   <footer>
     <MainFooter />
   </footer>
+  <ScrollTop />
 </template>
