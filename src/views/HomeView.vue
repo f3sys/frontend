@@ -1,12 +1,7 @@
 <script setup lang="ts">
-import { useTemplateRef, onMounted, ref } from "vue";
+import { useTemplateRef } from "vue";
 
-// const mainRef = useTemplateRef("main");
-const mainRef = ref<HTMLDivElement | null>(null);
-
-const goto = (main: HTMLDivElement | null) => {
-    main?.scrollIntoView({ behavior: "smooth" });
-}
+const mainRef = useTemplateRef<HTMLDivElement>("main");
 </script>
 
 <template>
@@ -18,9 +13,8 @@ const goto = (main: HTMLDivElement | null) => {
                 AICJ 学園祭 <br />
                 2024
             </h1>
-            <!-- <Button class="!absolute left-10 bottom-10" label="開催事項" as="a" href="#jikou" /> -->
 
-            <div class="!absolute right-0 bottom-0 cursor-pointer" @click="goto(mainRef)">
+            <div class="!absolute right-0 bottom-0 cursor-pointer" @click="mainRef?.scrollIntoView()">
                 <span class="h-16 w-16 bg-primary text-white dark:text-black inline-flex items-center justify-center">
                     <i class="pi pi-arrow-down !text-2xl"></i>
                 </span>
