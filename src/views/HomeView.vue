@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { useTemplateRef, onMounted } from "vue";
+import { useTemplateRef, onMounted, ref } from "vue";
 
-const mainRef = useTemplateRef("main");
+// const mainRef = useTemplateRef("main");
+const mainRef = ref<HTMLDivElement | null>(null);
 
-function goto(main: HTMLDivElement | null) {
+const goto = (main: HTMLDivElement | null) => {
     main?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
@@ -11,7 +12,7 @@ function goto(main: HTMLDivElement | null) {
 <template>
     <main>
         <div
-            class="bg-[url(../assets/F8ywqpKa8AE6NoI.jpg)] bg-cover bg-no-repeat bg-center h-full min-h-[calc(100svh-75px)] relative">
+            class="bg-[url(../assets/banner.webp)] bg-cover bg-no-repeat bg-center h-full min-h-[calc(100svh-75px)] relative">
             <h1 class="text-5xl font-semibold text-white absolute left-10 bottom-10"
                 style="text-shadow: 0px 0px 10px black">
                 AICJ 学園祭 <br />
