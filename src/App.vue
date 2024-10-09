@@ -13,6 +13,7 @@ import 'primeicons/primeicons.css';
 
   <RouterView />
 
+  <!-- <footer class="absolute bottom-0 left-0 right-0 z-50"> -->
   <footer>
     <MainFooter />
   </footer>

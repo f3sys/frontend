@@ -5,6 +5,7 @@ const GoodsView = () => import('../views/GoodsView.vue')
 const GroupsView = () => import('../views/GroupsView.vue')
 const ScheduleView = () => import('../views/ScheduleView.vue')
 const PamphletView = () => import('../views/PamphletView.vue')
+const NotFoundView = () => import('../views/NotFoundView.vue')
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,12 @@ const router = createRouter({
             meta: { title: 'パンフレット', description: 'データ版パンフレットをダウンロードいただけます。' },
             component: PamphletView
         },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found',
+            meta: { title: 'Page not found', description: 'ページが見つかりませんでした。' },
+            component: NotFoundView
+        }
     ],
     scrollBehavior(_to, _from, _savedPosition) {
         return {
