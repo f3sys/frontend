@@ -17,7 +17,7 @@ const props = defineProps<{
                 <div class="flex flex-col sm:flex-row">
                     <span>
                         <a v-if="['Twitter', 'Tiktok'].includes(subtitle)"
-                            :href="subtitle === 'Twitter' ? 'https://x.com/aicj_ed_jp' : 'https://www.tiktok.com/@wellcomeaicj'"
+                            :href="subtitle === 'Twitter' ? 'https://x.com/aicj_ed_jp' : 'https://www.tiktok.com/@welcomeaicj'"
                             class="hover:underline">
                             {{ subtitle }}
                         </a>

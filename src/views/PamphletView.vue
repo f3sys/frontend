@@ -13,10 +13,11 @@
                     個人利用・商用を問わず、再配布及びAICJ学園祭以外の目的での利用はご遠慮ください。
                 </span>
             </div>
-            <Image class="mb-10" src="https://placehold.co/210x297"
+            <Image class="mb-10" src="/pamphlet.jpg" alt="パンフレット"
                 image-style="width:100%; max-width: 20em; height: auto; margin-left: auto; margin-right: auto;">
             </Image>
-            <Button label="ダウンロード" icon="pi pi-download" class="w-full" />
+            <Button as="a" label="ダウンロード" icon="pi pi-download" class="w-full"
+                href="https://files.catbox.moe/imucqf.pdf" download />
         </div>
     </div>
 </template>
